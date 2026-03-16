@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="StudentsAvalonia.Pages.HomePage"
+        Width="700"
+        Height="450"
+        Title="Главная страница">
+
+    <Grid Background="LightBlue">
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Spacing="15">
+
+            <TextBlock Text="Главная страница"
+                       FontSize="26"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+
+            <Button Content="Студенты" Width="200"/>
+            <Button Content="Группы" Width="200"/>
+            <Button Content="Специальности" Width="200"/>
+            <Button Content="Выйти" Width="200" Click="BtnExit_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

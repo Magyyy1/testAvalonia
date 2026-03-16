@@ -1,0 +1,44 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="StudentsAvalonia.Pages.RegistPage"
+        Width="600"
+        Height="500"
+        Title="Регистрация">
+
+    <Grid Background="LightBlue">
+        <StackPanel Width="300"
+                    Spacing="10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+            <TextBlock Text="Регистрация"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Фамилия"/>
+            <TextBox x:Name="TxtSurname"/>
+
+            <TextBlock Text="Имя"/>
+            <TextBox x:Name="TxtName"/>
+
+            <TextBlock Text="Отчество"/>
+            <TextBox x:Name="TxtMiddleName"/>
+
+            <TextBlock Text="Дата рождения"/>
+            <DatePicker x:Name="DpBirthDate"/>
+
+            <TextBlock Text="Группа"/>
+            <ComboBox x:Name="CmbGroup"/>
+
+            <TextBlock Text="Логин"/>
+            <TextBox x:Name="TxtLogin"/>
+
+            <TextBlock Text="Пароль"/>
+            <TextBox x:Name="TxtPassword"/>
+
+            <Button Content="Зарегистрироваться" Click="BtnReg_Click"/>
+            <Button Content="Назад" Click="BtnBack_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
