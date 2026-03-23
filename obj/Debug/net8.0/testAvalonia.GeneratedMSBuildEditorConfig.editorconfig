@@ -26,6 +26,15 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/Danis/Documents/testAvalonia/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Danis/Documents/testAvalonia/Controls/GroupsControl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Danis/Documents/testAvalonia/Controls/SpecialitiesControl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Danis/Documents/testAvalonia/Controls/StudentsControl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Danis/Documents/testAvalonia/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
@@ -36,4 +45,13 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/Danis/Documents/testAvalonia/Pages/RegistPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Danis/Documents/testAvalonia/Windows/AddGroupWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Danis/Documents/testAvalonia/Windows/AddSpecialityWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Danis/Documents/testAvalonia/Windows/AddStudentWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="StudentsAvalonia.Windows.AddGroupWindow"
+        Width="420" Height="320"
+        WindowStartupLocation="CenterOwner">
+
+    <StackPanel Margin="20" Spacing="10">
+
+        <TextBlock Text="Добавление группы" FontSize="20"/>
+
+        <TextBox x:Name="NumberBox" Watermark="Номер группы"/>
+        <TextBox x:Name="DescriptionBox" Watermark="Описание"/>
+
+        <ComboBox x:Name="SpecialityBox"/>
+
+        <Button Content="Сохранить" Click="Save_Click"/>
+        <Button Content="Закрыть" Click="Close_Click"/>
+
+    </StackPanel>
+</Window>

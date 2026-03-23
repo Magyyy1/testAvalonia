@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="StudentsAvalonia.Windows.AddStudentWindow"
+        Width="420" Height="500"
+        WindowStartupLocation="CenterOwner">
+
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="10">
+
+            <TextBlock Text="Добавление студента" FontSize="20"/>
+
+            <TextBox x:Name="FnameBox" Watermark="Фамилия"/>
+            <TextBox x:Name="NameBox" Watermark="Имя"/>
+            <TextBox x:Name="PatronumicBox" Watermark="Отчество"/>
+
+            <DatePicker x:Name="BirthPicker"/>
+
+            <ComboBox x:Name="GroupBox"
+                      SelectionChanged="GroupBox_SelectionChanged"/>
+
+            <TextBox x:Name="SpecialityBox"
+                     Watermark="Специальность"
+                     IsReadOnly="True"/>
+
+            <Button Content="Сохранить" Click="Save_Click"/>
+            <Button Content="Закрыть" Click="Close_Click"/>
+
+        </StackPanel>
+    </ScrollViewer>
+</Window>

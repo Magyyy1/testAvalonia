@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:StudentsAvalonia.Data"
+             x:Class="StudentsAvalonia.Controls.StudentsControl"
+             mc:Ignorable="d">
+
+    <Grid RowDefinitions="Auto,*" Margin="10">
+
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <Button Content="Добавить студента" Click="Add_Click"/>
+            <Button Content="Обновить" Click="Refresh_Click"/>
+        </StackPanel>
+
+        <DataGrid x:Name="StudentGrid"
+                  Grid.Row="1"
+                  Margin="0,10,0,0"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  x:DataType="local:User">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IdUser}" Width="60"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Fname}" Width="120"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" Width="120"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronumic}" Width="120"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding DateBirth}" Width="120"/>
+                <DataGridTextColumn Header="Группа" Binding="{Binding Group.Number}" Width="100"/>
+                <DataGridTextColumn Header="Специальность" Binding="{Binding Group.Speciality.NameSpeciality}" Width="180"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+</UserControl>

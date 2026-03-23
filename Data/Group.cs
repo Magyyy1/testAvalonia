@@ -1,18 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace testAvalonia.Data
+namespace StudentsAvalonia.Data;
+
+public class Group
 {
-    public partial class Group
+    public int IdGroup { get; set; }
+    public string? Number { get; set; }
+    public string? Description { get; set; }
+
+    public int? IdSpeciality { get; set; }
+    public Speciality? Speciality { get; set; }
+
+    public List<User> Users { get; set; } = new();
+
+    public override string ToString()
     {
-        public int IdGroup { get; set; }
-
-        public string? Number { get; set; }
-
-        public int? IdSpeciality { get; set; }
-
-        public virtual Speciality? IdSpecialityNavigation { get; set; }
-
-        public virtual ICollection<User> Users { get; set; } = new List<User>();
+        return Number ?? "";
     }
 }

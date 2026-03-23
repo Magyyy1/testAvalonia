@@ -1,6 +1,6 @@
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
 using Avalonia.Interactivity;
+using StudentsAvalonia.Controls;
 
 namespace StudentsAvalonia.Pages;
 
@@ -9,17 +9,21 @@ public partial class HomePage : Window
     public HomePage()
     {
         InitializeComponent();
+        MainContent.Content = new StudentsControl();
     }
 
-    private void InitializeComponent()
+    private void Students_Click(object? sender, RoutedEventArgs e)
     {
-        AvaloniaXamlLoader.Load(this);
+        MainContent.Content = new StudentsControl();
     }
 
-    private void BtnExit_Click(object? sender, RoutedEventArgs e)
+    private void Groups_Click(object? sender, RoutedEventArgs e)
     {
-        AuthPage authPage = new AuthPage();
-        authPage.Show();
-        Close();
+        MainContent.Content = new GroupsControl();
+    }
+
+    private void Spec_Click(object? sender, RoutedEventArgs e)
+    {
+        MainContent.Content = new SpecialitiesControl();
     }
 }

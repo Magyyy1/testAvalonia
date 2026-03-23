@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:StudentsAvalonia.Data"
+             x:Class="StudentsAvalonia.Controls.GroupsControl"
+             mc:Ignorable="d">
+
+    <Grid RowDefinitions="Auto,*" Margin="10">
+
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <Button Content="Добавить группу" Click="Add_Click"/>
+            <Button Content="Обновить" Click="Refresh_Click"/>
+        </StackPanel>
+
+        <DataGrid x:Name="GroupGrid"
+                  Grid.Row="1"
+                  Margin="0,10,0,0"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  x:DataType="local:Group">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IdGroup}" Width="60"/>
+                <DataGridTextColumn Header="Номер группы" Binding="{Binding Number}" Width="150"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="220"/>
+                <DataGridTextColumn Header="Специальность" Binding="{Binding Speciality.NameSpeciality}" Width="180"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+</UserControl>

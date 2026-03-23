@@ -1,44 +1,34 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="StudentsAvalonia.Pages.RegistPage"
-        Width="600"
-        Height="500"
-        Title="Регистрация">
+        Width="450" Height="500">
 
-    <Grid Background="LightBlue">
-        <StackPanel Width="300"
-                    Spacing="10"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center">
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="10">
 
-            <TextBlock Text="Регистрация"
-                       FontSize="24"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Регистрация" FontSize="20"/>
 
-            <TextBlock Text="Фамилия"/>
-            <TextBox x:Name="TxtSurname"/>
+            <TextBox x:Name="FnameBox" Watermark="Фамилия"/>
+            <TextBox x:Name="NameBox" Watermark="Имя"/>
+            <TextBox x:Name="PatronumicBox" Watermark="Отчество"/>
 
-            <TextBlock Text="Имя"/>
-            <TextBox x:Name="TxtName"/>
+            <DatePicker x:Name="BirthPicker"/>
 
-            <TextBlock Text="Отчество"/>
-            <TextBox x:Name="TxtMiddleName"/>
+            <ComboBox x:Name="GroupBox"
+                      SelectionChanged="GroupBox_SelectionChanged"/>
 
-            <TextBlock Text="Дата рождения"/>
-            <DatePicker x:Name="DpBirthDate"/>
+            <TextBox x:Name="SpecialityBox"
+                     Watermark="Специальность"
+                     IsReadOnly="True"/>
 
-            <TextBlock Text="Группа"/>
-            <ComboBox x:Name="CmbGroup"/>
+            <TextBox x:Name="LoginBox" Watermark="Логин"/>
+            <TextBox x:Name="PasswordBox" Watermark="Пароль"/>
 
-            <TextBlock Text="Логин"/>
-            <TextBox x:Name="TxtLogin"/>
+            <Button Content="Зарегистрироваться" Click="Reg_Click"/>
+            <Button Content="Назад" Click="Back_Click"/>
 
-            <TextBlock Text="Пароль"/>
-            <TextBox x:Name="TxtPassword"/>
+            <TextBlock x:Name="StatusText" Foreground="DarkGreen" FontSize="14"/>
 
-            <Button Content="Зарегистрироваться" Click="BtnReg_Click"/>
-            <Button Content="Назад" Click="BtnBack_Click"/>
         </StackPanel>
-    </Grid>
+    </ScrollViewer>
 </Window>
